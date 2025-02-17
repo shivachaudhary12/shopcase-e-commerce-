@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your One-Stop Shopping Destination</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">ShopEase</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex mx-auto">
+                        <input class="form-control me-2" type="search" placeholder="Search products..." id="searchInput">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html"><i class="fas fa-user"></i> Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="s.jpg" class="d-block w-100" alt="Summer Sale">
+                    <div class="carousel-caption">
+                        <h2 class="animate__animated animate__fadeInDown">Summer Sale</h2>
+                        <p class="animate__animated animate__fadeInUp">Up to 50% off on selected items</p>
+                        <button class="btn btn-primary animate__animated animate__fadeInUp">Shop Now</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="Electronics Mega Sale.jpg" class="d-block w-100" alt="Electronics Deal">
+                    <div class="carousel-caption">
+                        <h2 class="animate__animated animate__fadeInDown">Electronics Mega Sale</h2>
+                        <p class="animate__animated animate__fadeInUp">Save big on latest gadgets</p>
+                        <button class="btn btn-primary animate__animated animate__fadeInUp">Explore Now</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="New Fashion Collection.png" class="d-block w-100" alt="Fashion Collection">
+                    <div class="carousel-caption">
+                        <h2 class="animate__animated animate__fadeInDown">New Fashion Collection</h2>
+                        <p class="animate__animated animate__fadeInUp">Get up to 40% off on trendy styles</p>
+                        <button class="btn btn-primary animate__animated animate__fadeInUp">View Collection</button>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <img src="Home Makeover Sale.png" class="d-block w-100" alt="Home Decor">
+                    <div class="carousel-caption">
+                        <h2 class="animate__animated animate__fadeInDown">Home Makeover Sale</h2>
+                        <p class="animate__animated animate__fadeInUp">Transform your space with 30% off</p>
+                        <button class="btn btn-primary animate__animated animate__fadeInUp">Discover More</button>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <img src="Beauty Essentials.png" class="d-block w-100" alt="Beauty Products">
+                    <div class="carousel-caption">
+                        <h2 class="animate__animated animate__fadeInDown">Beauty Essentials</h2>
+                        <p class="animate__animated animate__fadeInUp">Buy 2 Get 1 Free on all beauty products</p>
+                        <button class="btn btn-primary animate__animated animate__fadeInUp">Shop Beauty</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories container my-5">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="category-card" data-category="Electronics">
+                    <img src="e.png" alt="Electronics">
+                    <h3>Electronics</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Fashion">
+                    <img src="f.jpg" alt="Fashion">
+                    <h3>Fashion</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Home & Decor">
+                    <img src="h.avif" alt="Home & Decor">
+                    <h3>Home & Decor</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Beauty & Personal Care">
+                    <img src="b.jpeg" alt="Beauty">
+                    <h3>Beauty & Personal Care</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Sports">
+                    <img src="sp.jpeg" alt="Sports">
+                    <h3>Sports & Fitness</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Books">
+                    <img src="book.avif" alt="Books">
+                    <h3>Books & Stationery</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Toys">
+                    <img src="gm.jpg" alt="Toys">
+                    <h3>Toys & Games</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card" data-category="Jewelry">
+                    <img src="jw.jpg" alt="Jewelry">
+                    <h3>Jewelry & Watches</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products container my-5">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="row g-4" id="featuredProducts">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get updates about new products and special offers!</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Add more footer columns -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">ShopEase</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="account.html"><i class="fas fa-user"></i> Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Account Section -->
+    <section class="account-section container my-5 pt-5">
+        <div class="row">
+            <!-- Account Navigation -->
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <button class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#profile">
+                        Profile
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-bs-toggle="list" href="#orders">
+                        Orders
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-bs-toggle="list" href="#addresses">
+                        Addresses
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings">
+                        Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- Account Content -->
+            <div class="col-lg-9">
+                <div class="tab-content">
+                    <!-- Profile Section -->
+                    <div class="tab-pane fade show active" id="profile">
+                        <h3>My Profile</h3>
+                        <form id="profileForm" class="mt-4">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="tab-pane fade" id="orders">
+                        <h3>My Orders</h3>
+                        <div class="orders-list mt-4" id="ordersList">
+                            <!-- Orders will be dynamically loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Addresses Section -->
+                    <div class="tab-pane fade" id="addresses">
+                        <h3>My Addresses</h3>
+                        <div class="addresses-list mt-4" id="addressesList">
+                            <!-- Addresses will be dynamically loaded here -->
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="addNewAddress()">Add New Address</button>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div class="tab-pane fade" id="settings">
+                        <h3>Account Settings</h3>
+                        <form id="settingsForm" class="mt-4">
+                            <div class="mb-3">
+                                <label class="form-label">Change Password</label>
+                                <input type="password" class="form-control mb-2" placeholder="Current Password">
+                                <input type="password" class="form-control mb-2" placeholder="New Password">
+                                <input type="password" class="form-control" placeholder="Confirm New Password">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Notification Preferences</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="emailNotif">
+                                    <label class="form-check-label" for="emailNotif">
+                                        Email Notifications
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="smsNotif">
+                                    <label class="form-check-label" for="smsNotif">
+                                        SMS Notifications
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Settings</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
